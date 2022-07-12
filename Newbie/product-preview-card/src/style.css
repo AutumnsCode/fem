@@ -1,0 +1,220 @@
+:root {	--clr-primary-400: hsl(228, 12%, 48%);
+	--clr-primary-900: hsl(212, 21%, 14%);
+	--clr-neutral-500: hsl(30, 38%, 92%);
+	--clr-neutral-900: hsl(0, 0%, 100%);
+	--clr-accent-400: hsl(158, 36%, 37%);
+	--clr-accent-700: hsl(158, 36%, 27%);
+
+	--ff-primary: 'Montserrat', sans-serif;
+	--ff-secondary: 'Fraunces', serif;
+	--fw-bold: 700;
+	--fw-normal: 500;
+
+	--fs-300: 0.8125rem;
+	--fs-400: 0.875rem;
+	--fs-700: 2rem;
+
+	--spacing-1: 0.8125rem;
+	--spacing-2: 1.125rem;
+	--spacing-3: 1.25rem;
+	--spacing-4: 1.5rem;
+	--spacing-5: 3.375rem;
+}
+
+@media (min-width: 38em) {
+	:root {
+		--spacing-4: 1.75rem;
+		--spacing-3: 1.5rem;
+		--spacing-5: 2rem;
+	}
+	
+}
+
+/* Reset  */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+	height: 100%;
+}
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+body {
+	background-color: var(--clr-neutral-500);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+main {
+	width: 21.5rem;
+	background: var(--clr-neutral-900);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+picture img{
+	height: 15rem;
+}
+
+article {
+	padding: var(--spacing-4);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-400);
+	font-weight: var(--fw-normal);
+	color: var(--clr-primary-400);
+}
+
+h1 {
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-700);
+	font-weight: --fw-bold;
+	line-height: 1.1;
+	color: var(--clr-primary-900);
+	margin-bottom: var(--spacing-4);
+}
+
+.nav {
+	font-size: var(--fs-300);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: var(--spacing-1);
+}
+.description {
+	margin-bottom: var(--spacing-5);
+}
+
+.price {
+	/* width: 100%; */
+	display: flex;
+	align-items: center;
+	margin-bottom: var(--spacing-3);
+}
+
+.new__price,
+.old__price {
+	flex-basis: 50%;
+}
+
+.new__price {
+	font-size: var(--fs-700);
+	font-family: var(--ff-secondary);
+	color: var(--clr-accent-400);
+}
+
+.old__price {
+	text-decoration: line-through;
+}
+
+.btn {
+	width: 100%;
+	background: var(--clr-accent-400);
+	color: var(--clr-neutral-900);
+	display: flex;
+	justify-content: center;
+	padding: var(--spacing-1);
+	border: none;
+	border-radius: 0.25rem;
+	display: flex;
+	align-items: center;
+	font-weight: --fw-bold;
+	cursor: pointer;
+}
+
+.btn img {
+	height: var(--fs-400);
+	margin-right: 12px;
+}
+
+.btn:active, .btn:focus-within, .btn:hover {
+	background-color: var(--clr-accent-700);
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	font-size: var(--ff-primary);
+	font-size: var(--fs-300);
+}
+
+.attribution a, .attribution a:hover, .attribution a:focus-within, .attribution a:active {
+	color: var(--clr-accent-400);
+	text-decoration: none;
+	font-weight: --fw-bold;
+	font-size: var(--ff-primary);
+}
+
+/* media Query  */
+
+@media (min-width: 38em) {
+	main {
+		width: 37.5rem;
+		flex-direction: row;
+	}
+
+	picture, article {
+		flex-basis: 50%;
+	}
+	picture img{
+		height: 100%;
+	}
+
+	.description {
+		width: 28ch;
+		line-height: 1.6;
+	}
+	
+	.new__price {
+		flex-basis: 70%;
+	}
+}
