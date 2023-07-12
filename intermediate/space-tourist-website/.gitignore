@@ -12,7 +12,6 @@
 *.xd
 
 # Avoid your project being littered with annoying .DS_Store files!
-design-system.html
 .DS_Store
 .prettierignore
 node_modules
