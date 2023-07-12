@@ -1,0 +1,26 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  z-index: 99999 ;
+  color: hsl( var(--clr-dark) );
+  background-color: hsl(var(--clr-white));
+  padding: .5em 1em;
+  margin-inline: auto;
+  transition: transform 500ms ease-in-out;
+  transform: translateY(-100%);
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}

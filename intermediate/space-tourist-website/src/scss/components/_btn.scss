@@ -1,0 +1,35 @@
+@use '../abstract' as *;
+.btn {
+  &-large {
+    position: relative;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-grid;
+    padding-inline:  2em;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 50%;
+    z-index: 1;
+    
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-color: hsl(var(--clr-white) / 0.1);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: transform 0.5s ease-in-out,opacity 0.5s linear;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scale(1.4);
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use '../abstract' as *;
+
+:root {
+  @each $clr, $val in $colors {
+    --clr-#{$clr}: #{$val};
+  }
+
+  // Font-size
+
+  @each $screen, $sizes in $typo {
+    @if $screen == 'default' {
+      @each $p, $v in $sizes {
+        --fs-#{$p}: #{$v};
+      }
+    } @else if $screen == mobile {
+      @include mq-min(mobile) {
+        @each $p, $v in $sizes {
+          --fs-#{$p}: #{$v};
+        }
+      }
+    } @else if $screen == desktop {
+      @include mq-min(desktop) {
+        @each $p, $v in $sizes {
+          --fs-#{$p}: #{$v};
+        }
+      }
+    }
+  }
+
+  // font-family
+
+  @each $prop, $val in $family {
+    --ff-#{$prop}: #{$val};
+  }
+
+  --letter-spacing-1: 4.75px;
+  --letter-spacing-2: 2.7px;
+  --letter-spacing-3: 2.35px;
+}

@@ -1,0 +1,21 @@
+@use '../abstract' as *;
+
+.primary {
+
+  &-navigation {
+    --gap: 8rem;
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+
+      span {
+        font-weight: 700;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}

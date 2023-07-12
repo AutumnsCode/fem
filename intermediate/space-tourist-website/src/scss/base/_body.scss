@@ -1,0 +1,33 @@
+@use '../abstract' as *;
+
+body {
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
+  font-family: var(--ff-sans-serif);
+  font-size: var(--fs-400);
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+  
+  background-size: cover;
+  background-position: bottom center;
+
+  @include mq-min(mobile) {
+    background-position: center center;
+  }
+}
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 4.05px;
+  font-family: var(--ff-sans-cond);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: hsl(var(--clr-accent));
+
+  img {
+    width: 3rem;
+  }
+}

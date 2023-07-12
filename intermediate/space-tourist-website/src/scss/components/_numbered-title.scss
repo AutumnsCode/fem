@@ -1,0 +1,19 @@
+@use '../abstract' as *;
+
+.numbered-title {
+  font-family: var(--ff-sans-cond);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-1);
+  font-size: var(--fs-500);
+
+  > span {
+    font-weight: 700;
+    color: hsl(var(--clr-white) / 0.25);
+    margin-right: 1em;
+  }
+
+  @include mq-min(mobile) {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+}
