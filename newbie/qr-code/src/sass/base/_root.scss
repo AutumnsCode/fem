@@ -1,0 +1,11 @@
+@use '../abstract' as *;
+
+:root {
+  @each $clr, $val in $colors {
+    --#{$clr}: #{$val};
+  }
+
+  @each $p, $v in $typo {
+    --fs-#{$p}: #{$v};
+  }
+}
