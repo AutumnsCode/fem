@@ -1,0 +1,24 @@
+@use '../abstract' as *;
+
+:root {
+  --ff-sans-serif: 'Manrope', sans-serif;
+
+  // Color
+  @each $prop, $val in $colors {
+    --clr-#{$prop}: #{$val};
+  }
+
+  @each $screen, $sizes in $typo {
+    @if $screen == 'default' {
+      @each $p, $v in $sizes {
+        --fs-#{$p}: #{$v};
+      }
+    } @else if $screen == desktop {
+      @include mq-min(desktop) {
+        @each $p, $v in $sizes {
+          --fs-#{$p}: #{$v};
+        }
+      }
+    }
+  }
+}
