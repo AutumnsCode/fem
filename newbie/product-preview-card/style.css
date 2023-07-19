@@ -170,6 +170,7 @@ body {
 }
 
 .article-button {
+  cursor: pointer;
   border: 0;
   background-color: var(--dark-cyan);
   color: var(--white);
@@ -180,6 +181,11 @@ body {
   gap: 1rem;
   padding-block: 0.875rem;
   border-radius: 10px;
+  text-decoration: none;
+}
+
+.article-button:hover, .article-button:focus {
+  background: hsl(158, 20%, 20%);
 }
 
 @media (min-width: 40em) {
@@ -192,15 +198,15 @@ body {
   }
 
   .article-header {
-    flex: 1;
-    width: 100%;
+    flex-basis: 50%;
     height: auto;
     background-image: url(./images/image-product-desktop.jpg);
   }
   .article-body {
+    flex-basis: 50%;
     flex: 1;
     width: 100%;
-    padding: 3.25rem 2rem 2rem;
+    padding: 3.25rem 1.75rem 2rem;
   }
 
   .article-body__title {
@@ -209,6 +215,5 @@ body {
 
   .article-body__paragraph {
     margin-bottom: 2rem;
-    font-size: var(--fs-400);
   }
 }
