@@ -15,8 +15,7 @@
   }
   &-image {
     height: 15rem;
-    background-color: hsl(var(--clr-soft-violet));
-    background-image: url(../../../images/image-header-mobile.jpg);
+    background: url(../../../images/image-header-mobile.jpg), hsl(var(--clr-soft-violet));
     
     background-size: cover;
     position: relative;
