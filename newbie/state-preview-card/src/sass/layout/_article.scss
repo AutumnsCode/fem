@@ -25,7 +25,7 @@
     @include mq-min(desktop) {
       flex-basis: 50%;
       height: auto;
-      background-image: url(../../../images/image-header-desktop.jpg);
+      background: url(../../../images/image-header-desktop.jpg), hsl(var(--clr-soft-violet));
     }
   }
 
