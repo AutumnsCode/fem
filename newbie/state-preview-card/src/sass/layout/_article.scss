@@ -1,0 +1,107 @@
+@use '../abstract' as *;
+
+.article {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 21.5625rem;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include mq-min(desktop) {
+    flex-direction: row;
+    max-width: 69.625rem;
+    border-radius: 1rem;
+  }
+  &-image {
+    height: 15rem;
+    background: url(../../../images/image-header-mobile.jpg);
+    background-size: cover;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(var(--clr-soft-violet) / 0.5);
+    }
+
+    @include mq-min(desktop) {
+      flex-basis: 50%;
+      height: auto;
+      background-image: url(../../../images/image-header-desktop.jpg);
+    }
+  }
+
+  &-body {
+    padding: 2.5rem 2rem;
+    background: hsl(var(--clr-d-desaturated-blue));
+    text-align: center;
+
+    @include mq-min(desktop) {
+      flex-basis: 50%;
+      padding: 5rem 4.5rem 4rem;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.1;
+      color: hsl(var(--clr-white));
+      margin-bottom: 1.25rem;
+
+      span {
+        color: hsl(var(--clr-soft-violet))
+      }
+
+      @include mq-min(desktop) {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+
+      }
+    }
+
+    &-para {
+      margin-bottom: 3rem;
+
+      @include mq-min(desktop) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &-info {
+    flex-direction: column;
+
+    p {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 1.1;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: hsl(var(--clr-white) / 0.6);
+      font-family: var(--ff-second);
+    }
+
+    @include mq-min(desktop) {
+      flex-direction: row;
+      gap: 4rem;
+
+      h3 {
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.flow> *:where(:not(:first-child)) {
+  margin-top: 2rem;
+  @include mq-min(desktop) {
+    margin-top: 0;
+  }
+}

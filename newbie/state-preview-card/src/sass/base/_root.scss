@@ -1,0 +1,11 @@
+@use "../abstract" as *;
+
+:root {
+  @each $clr, $val in $colors {
+    --clr-#{$clr}: #{$val};
+  }
+
+  @each $prop, $val in $ff {
+    --ff-#{$prop}: #{$val};
+  }
+}
