@@ -15,7 +15,7 @@
   }
   &-image {
     height: 15rem;
-    background: url(../../../images/image-header-mobile.jpg), hsl(var(--clr-soft-violet));
+    background: url(/images/image-header-mobile.jpg), hsl(var(--clr-soft-violet));
     
     background-size: cover;
     position: relative;
@@ -25,7 +25,7 @@
     @include mq-min(desktop) {
       flex-basis: 50%;
       height: auto;
-      background: url(../../../images/image-header-desktop.jpg), hsl(var(--clr-soft-violet));
+      background: url(/images/image-header-desktop.jpg), hsl(var(--clr-soft-violet));
     }
   }
 
