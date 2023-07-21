@@ -16,15 +16,18 @@
 
   picture {
     flex-basis: 100%;
-    position: relative;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.3;
+    mix-blend-mode:luminosity;
+    
 
-    &::before {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-color: hsl(var(--clr-soft-violet) / 0.3);
-    }
+    // &::before {
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   background-color: hsl(var(--clr-soft-violet) / 0.3);
+    // }
     img {
       height: 100%;
       object-fit: cover;
