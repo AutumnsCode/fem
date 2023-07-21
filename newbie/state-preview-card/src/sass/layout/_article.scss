@@ -2,42 +2,44 @@
 
 .article {
   display: flex;
-  flex-direction: column-reverse;
-  width: 100%;
-  max-width: 21.5625rem;
-  border-radius: 8px;
+  max-width: 21.5625em;
+
+  border-radius: 1rem;
   overflow: hidden;
+  flex-direction: column-reverse;
 
   @include mq-min(desktop) {
     flex-direction: row;
-    max-width: 69.625rem;
-    border-radius: 1rem;
+    max-width: 69.625em;
+    flex-wrap: nowrap;
   }
-  &-image {
-    height: 15rem;
-    background: url(/images/image-header-mobile.jpg), hsl(var(--clr-soft-violet));
-    
-    background-size: cover;
+
+  picture {
+    flex-basis: 100%;
     position: relative;
-    background-blend-mode: multiply;
 
-
-    @include mq-min(desktop) {
-      flex-basis: 50%;
-      height: auto;
-      background: url(/images/image-header-desktop.jpg), hsl(var(--clr-soft-violet));
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: hsl(var(--clr-soft-violet) / 0.3);
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
     }
   }
 
   &-body {
-    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    
     background: hsl(var(--clr-d-desaturated-blue));
     text-align: center;
-
-    @include mq-min(desktop) {
-      flex-basis: 50%;
-      padding: 5rem 4.5rem 4rem;
-      text-align: left;
+    display: flex;
+    align-items: center;
+    > div {
+      padding: 2.5rem 2rem;
     }
 
     h1 {
@@ -49,18 +51,26 @@
       span {
         color: hsl(var(--clr-soft-violet))
       }
-
-      @include mq-min(desktop) {
-        font-size: 2.25rem;
-        margin-bottom: 2rem;
-
-      }
     }
 
     &-para {
       margin-bottom: 3rem;
+    }
 
-      @include mq-min(desktop) {
+    @include mq-min(desktop){
+      
+      text-align: left;
+      flex-basis: 100%;
+      > div {
+        padding: 3rem 4rem 2rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+      }
+
+      &-para {
         margin-bottom: 5rem;
       }
     }
@@ -68,6 +78,7 @@
 
   &-info {
     flex-direction: column;
+    gap: 2rem;
 
     p {
       font-weight: 700;
@@ -77,11 +88,11 @@
     h3 {
       text-transform: uppercase;
       font-weight: 400;
+      font-family: var(--ff-second);
       line-height: 1.1;
-      font-size: 12px;
+      font-size: 0.75rem;
       letter-spacing: 2px;
       color: hsl(var(--clr-white) / 0.6);
-      font-family: var(--ff-second);
     }
 
     @include mq-min(desktop) {
@@ -95,9 +106,33 @@
   }
 }
 
-.flow> *:where(:not(:first-child)) {
-  margin-top: 2rem;
-  @include mq-min(desktop) {
-    margin-top: 0;
-  }
-}
+
+//   &-info {
+//     flex-direction: column;
+
+//     p {
+//       font-weight: 700;
+//       font-size: 1.25rem;
+//     }
+
+//     h3 {
+//       text-transform: uppercase;
+//       font-weight: 400;
+//       line-height: 1.1;
+//       font-size: 12px;
+//       letter-spacing: 2px;
+//       color: hsl(var(--clr-white) / 0.6);
+//       font-family: var(--ff-second);
+//     }
+
+//     @include mq-min(desktop) {
+//       flex-direction: row;
+//       gap: 4rem;
+
+//       h3 {
+//         letter-spacing: 1px;
+//       }
+//     }
+//   }
+// }
+

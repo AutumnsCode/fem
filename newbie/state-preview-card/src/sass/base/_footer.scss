@@ -1,0 +1,11 @@
+footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: .75rem;
+
+  a {
+    text-decoration: none;
+    color: hsl(var(--clr-soft-violet));
+  }
+}
