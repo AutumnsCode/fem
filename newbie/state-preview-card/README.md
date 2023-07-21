@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot%202023-07-20%20at%2009-05-34%20Frontend%20Mentor%20Stats%20preview%20card%20component.png)
+![](./images/screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/AutumnsCode/fem/tree/main/newbie/state-preview-card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://glittery-mousse-ed6762.netlify.app/)
 
 ## My process
 
@@ -45,7 +45,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+
 
 ### What I learned
 
@@ -64,7 +64,6 @@ Since I struggle with layout, I will continue workin on it.
 ## Author
 - Frontend Mentor - [@AutumnsCode](https://www.frontendmentor.io/profile/AutumnsCode)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
