@@ -1,0 +1,17 @@
+@use '../abstract' as *;
+
+:root {
+  // colors
+  @each $name, $value in $colors {
+    --clr-#{$name}: #{$value};
+  }
+
+  //fontsize
+
+  @each $size, $val in $fonts {
+    --fs-#{$size}: #{$val};
+  }
+
+  // font family
+  --ff-base: 'Kumbh Sans', sans-serif;
+}
