@@ -18,10 +18,12 @@
       flex-basis: 40%;
     background-color: hsl(var(--clr-soft-violet));
 
+
     img {
       height: 100%;
       object-fit: cover;
       mix-blend-mode: multiply;
+      opacity: 0.5;
     }
 
     @include mq-min(desktop) {
