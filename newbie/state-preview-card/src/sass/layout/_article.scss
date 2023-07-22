@@ -15,22 +15,17 @@
   }
 
   picture {
-    flex-basis: 100%;
-    background-color: hsl(277, 64%, 61%);
-    opacity: 0.3;
-    mix-blend-mode:luminosity;
-    
+      flex-basis: 40%;
+    background-color: hsl(var(--clr-soft-violet));
 
-    // &::before {
-    //   content: '';
-    //   width: 100%;
-    //   height: 100%;
-    //   position: absolute;
-    //   background-color: hsl(var(--clr-soft-violet) / 0.3);
-    // }
     img {
       height: 100%;
       object-fit: cover;
+      mix-blend-mode: multiply;
+    }
+
+    @include mq-min(desktop) {
+      flex-basis: 100%;
     }
   }
 
