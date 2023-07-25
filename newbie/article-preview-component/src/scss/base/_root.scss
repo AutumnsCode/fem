@@ -1,0 +1,22 @@
+@use '../abstract' as *;
+
+:root {
+  --ff-base: 'Manrope', sans-serif;
+  @each $name, $val in $colors{
+    --clr-#{$name}: #{$val};
+  }
+
+  @each $screen, $sizes in $size {
+    @if $screen == 'default' {
+      @each $p, $v in $sizes {
+        --fs-#{$p}: #{$v};
+      }
+    } @else if $screen == desktop {
+      @include mq(desktop) {
+        @each $p, $v in $sizes {
+          --fs-#{$p}: #{$v};
+        }
+      }
+    }
+  }
+}

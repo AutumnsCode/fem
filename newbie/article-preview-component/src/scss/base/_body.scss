@@ -1,0 +1,22 @@
+@use '../abstract' as *;
+
+body {
+  font-size: var(--fs-400);
+  font-weight: 500;
+  font-family: var(--ff-base);
+  background-color: hsl(var(--clr-light-gray-blue));
+  color: hsl(var(--clr-gray-blue));
+
+  display: grid;
+  place-content: center;
+}
+
+main {
+  width: 100%;
+  padding: 5rem 1.25rem;
+  max-width: 23rem;
+
+  @include mq(desktop) {
+    max-width: 45.75rem;
+  }
+}
