@@ -1,0 +1,10 @@
+@use '../abstract' as *;
+
+body {
+  background-color: hsl(var(--clr-vd-blue-main));
+  color: hsl(var(--clr-soft-blue));
+  font-size: var(--fs-400);
+  font-family: 'Outfit', sans-serif;
+  display: grid;
+  place-content: center;
+}

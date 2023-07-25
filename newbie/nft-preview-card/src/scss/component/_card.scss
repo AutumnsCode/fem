@@ -1,0 +1,107 @@
+@use '../abstract' as *;
+
+.nft {
+  width: 100%;
+  padding: 1.375rem;
+  background-color: hsl(var(--clr-vd-blue-card));
+  border-radius: 8px;
+
+  &-picture {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: hsl(var(--clr-cyan)/ 0.5);
+      background-image: url(/images/icon-view.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: all 0.5s ease-in;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &-content {
+    &__title {
+      margin-block: 1.5rem 0.75rem;
+      font-size: 1.375rem; 
+      line-height: 1;
+      color: hsl(var(--clr-white));
+      font-size: 1.25rem;
+
+      @include mq(desktop) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__para {
+      font-weight: 300;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+
+      @include mq(desktop) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid hsl(var(--clr-vd-blue-line));
+
+      @include mq(desktop) {
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    &__detail {
+      display: flex;
+      align-items: center;
+      font-size: var(--fs-300);
+      gap: 0.4375rem;
+
+      img {
+        height: 1rem;
+      }
+
+      p {
+        font-weight: 600;
+      }
+
+      .eth {
+        color: hsl(var(--clr-cyan));
+      }
+    }
+
+    &__user {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+      font-size: var(--fs-300);
+      img {
+        width: 1.75rem;
+        border: 2px solid hsl(var(--clr-white));
+        border-radius: 50%;
+      }
+
+      span {
+        color: hsl(var(--clr-white));
+      }
+    }
+  }
+}
