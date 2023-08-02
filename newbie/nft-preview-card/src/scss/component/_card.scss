@@ -35,11 +35,16 @@
 
   &-content {
     &__title {
+      cursor: pointer;
       margin-block: 1.5rem 0.75rem;
       font-size: 1.375rem; 
       line-height: 1;
       color: hsl(var(--clr-white));
       font-size: 1.25rem;
+
+      &:hover, &:focus {
+        color: hsl(var(--clr-cyan));
+      }
 
       @include mq(desktop) {
         margin-bottom: 1rem;
@@ -99,8 +104,14 @@
         border-radius: 50%;
       }
 
-      span {
+      a {
+        text-decoration: none;
+        cursor: pointer;
         color: hsl(var(--clr-white));
+
+        &:hover, &:focus {
+          color: hsl(var(--clr-cyan));
+        }
       }
     }
   }
