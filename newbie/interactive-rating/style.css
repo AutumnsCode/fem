@@ -1,0 +1,32 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.star-rating {
+  color: #bebebe;
+  font-size: 2em;
+}
+
+.my-star::before {
+  content: '\002605';
+}
+
+.my-star {
+  font-style: unset !important;
+}
+
+.is-active {
+  color: #fb8900;
+}
+
+.my-star:not(.is-active):hover {
+  color: #fb8900;
+}

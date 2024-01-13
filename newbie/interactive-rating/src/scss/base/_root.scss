@@ -1,0 +1,30 @@
+@use '../abstract' as *;
+
+:root {
+
+  @each $base, $size in $font-family {
+    --ff-#{$base}: #{$size};
+  }
+
+  @each $weight, $value in $font-weight {
+    --fw-#{$weight}: #{$value};
+  }
+
+  @each $shade, $val in $colors {
+    --clr-#{$shade}: #{$val};
+  }
+
+  @each $screen, $sizes in $font-size {
+    @if $screen == 'default' {
+      @each $size, $value in $sizes {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen == 'desktop' {
+      @include mq(desktop) {
+        @each $size, $value in $sizes {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}

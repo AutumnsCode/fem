@@ -1,0 +1,23 @@
+@use '../abstract' as *;
+
+:root {
+  @each $prop, $shade in $colors {
+    @each $color, $val in $shade {
+      --#{$prop}-#{$color}: #{$val};
+    }
+  }
+
+  @each $screen, $sizes in $font-size {
+    @if $screen == 'default' {
+      @each $p, $v in $sizes {
+        --fs-#{$p}: #{$v};
+      }
+    } @else if $screen == large{
+      @include mq(large) {
+        @each $p, $v in $sizes {
+          --fs-#{$p}: #{$v};
+        }
+      }
+    }
+  }
+}

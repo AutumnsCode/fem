@@ -1,0 +1,48 @@
+@use '../abstract' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 2.5rem 2.5rem -10px rgba(0, 0, 0, 0.25);
+
+  background: url(/images/bg-pattern-mobile.svg), #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  overflow: visible;
+
+  @include mq(large) {
+    flex-direction: row;
+    width: 40rem;
+    height: 32rem;
+    background: url(/images/bg-pattern-desktop.svg), #fff;
+    background-position: -38rem 68%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+  }
+
+  &-image {
+    align-self: center;
+    width: calc((100% / 4) * 3);
+    height: auto;
+    margin-top: -7rem;
+
+    @include mq(large) {
+      align-self: center;
+      width: auto;
+      height: auto;
+      margin-top: -1rem;
+      margin-left: -5.25rem;
+    }
+  }
+
+  &-content {
+    padding: 4.5rem 2.5rem 1.5rem;
+
+    @include mq(large) {
+      width: 50%;
+      padding: 4.5rem 5.5rem ;
+    }
+  }
+}

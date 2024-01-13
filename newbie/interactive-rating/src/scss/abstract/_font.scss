@@ -1,0 +1,24 @@
+@use 'function' as *;
+
+$font-family: (
+  'regular': "'Overpass', sans-serif",
+);
+
+$font-weight: (
+  'normal': 400,
+  'bold': 700,
+);
+
+$font-size: (
+  'default': (
+    400: toRem(14),
+    500: toRem(16),
+    600: toRem(22),
+  ), 
+  'desktop': (
+    400: toRem(15),
+    500: toRem(18),
+    600: toRem(28)
+  )
+)
+

@@ -1,0 +1,26 @@
+@use '../abstract' as *;
+html {
+  font-size: 15px;
+}
+
+
+body {
+  background-color: hsl(var(--clr-vd-blue));
+  color: hsl(var(--clr-white));
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-400);
+
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  max-width: min(100% - toRem(48), toRem(410));
+  margin-inline: auto;
+  background: hsl(var(--clr-dark-blue));
+  border-radius: toRem(24);
+}
+
+.container {
+  padding-inline: toRem(24);
+}

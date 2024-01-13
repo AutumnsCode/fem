@@ -1,0 +1,8 @@
+@use 'sass:math';
+
+$base-size: 15;
+
+@function toRem($value) {
+  $rem: math.div($value, $base-size) + rem;
+  @return $rem;
+}
