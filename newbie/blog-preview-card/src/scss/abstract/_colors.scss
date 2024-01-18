@@ -1,0 +1,23 @@
+$-color-yellow: hsl(47 88% 63%);
+$-color-white: hsl(0 0% 100%);
+$-color-gray: hsl(0 0% 50%);
+$-color-black: hsl(0 0% 7%);
+
+$light: (
+  "primary": $-color-yellow,
+  "secondary": $-color-white,
+  "accent": $-color-black,
+  "base": $-color-gray,
+);
+
+$dark: (
+  "primary": $-color-black,
+  "secondary": $-color-yellow,
+  "accent": $-color-white,
+  "base": $-color-gray,
+);
+
+$color-primary: var(--primary);
+$color-secondary: var(--secondary);
+$color-accent: var(--accent);
+$color-base: var(--base);

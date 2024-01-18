@@ -1,0 +1,36 @@
+@use '../abstract' as *;
+
+.card {
+  padding: $card-padding;
+  background-color: $card-background-default;
+  border-radius: $border-radius-2;
+
+  &-img {
+    border-radius: $border-radius-1;
+    overflow: hidden;
+    margin-bottom: $size-7;
+
+    img {
+      height: 12.5rem;
+    }
+  }
+
+  &-label{
+    display: inline-block;
+
+    padding: $size-2 $size-3;
+    background: $card-background-label;
+    border-radius: $border-radius-1;
+    width: auto;
+    
+    h2 {
+      font-size: $font-size-300;
+      font-weight: $font-weight-bold;
+      color: $card-color-title;
+
+      @include mq(small) {
+        font-size: $font-size-300;
+      }
+    }
+  }
+}
